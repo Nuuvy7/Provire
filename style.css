@@ -43,4 +43,28 @@ nav ul li a:hover {
     padding: 50px 20px;
     text-align: center;
     font-size: large;
+    size: 20px;
+}
+.product {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #e2e2e2;
+}
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
 }
