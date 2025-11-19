@@ -296,3 +296,31 @@ function typeWriter() {
 window.addEventListener('load', () => {
     setTimeout(typeWriter, 500);
 });
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    const scrolled = window.scrollY;
+    const maxScroll = 500; // Adjust this value to control how much scroll triggers full darkness
+    const scrollPercent = Math.min(scrolled / maxScroll, 1); // 0 to 1
+    
+    if (scrolled > 0) {
+        nav.classList.add('scrolled');
+        
+        // Interpolate between light and dark gradient
+        const r1 = Math.round(179 - (179 * scrollPercent)); // #B3F7FF → darker
+        const g1 = Math.round(247 - (247 * scrollPercent));
+        const b1 = Math.round(255 - (200 * scrollPercent));
+        
+        const r2 = Math.round(66 - (52 * scrollPercent)); // #4242C2 → darker
+        const g2 = Math.round(66 - (26 * scrollPercent));
+        const b2 = Math.round(194 - (77 * scrollPercent));
+        
+        const r3 = Math.round(75 - (75 * scrollPercent)); // #4B0096 → darker
+        const g3 = Math.round(0);
+        const b3 = Math.round(150 - (102 * scrollPercent));
+        
+        nav.style.background = `linear-gradient(45deg, rgb(${r1},${g1},${b1}), rgb(${r2},${g2},${b2}), rgb(${r3},${g3},${b3}))`;
+    } else {
+        nav.classList.remove('scrolled');
+        nav.style.background = 'linear-gradient(45deg, #B3F7FF, #4242C2, #4B0096)';
+    }
+});
