@@ -1,31 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROVIRE SC</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>EduVerse - Platform Belajar Modern</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="header">
-        <header>
-            <h1>PROVIRE Student Company</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                </ul>
-            </nav>
-        </header>
-    </section>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="particles" id="particles"></div>
+    
+    <!-- Glowing Orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
 
-    <section id="Hero">
+    <nav id="navbar">
+        <div class="logo">EduVerse</div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#courses">Kursus</a></li>
+            <li><a href="#features">Fitur</a></li>
+            <li><a href="#testimonials">Testimoni</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="floating-icon icon1">💡</div>
+        <div class="floating-icon icon2">🚀</div>
+        <div class="floating-icon icon3">📚</div>
+        <div class="floating-icon icon4">🎯</div>
+        
         <div class="hero-content">
-            <h2>Halo! Kami adalah Provire Student Company</h2>
-            <p>Provire SC adalah perusahaan yang didirikan oleh siswa kelas 10 SMKN 6 jakarta, Student Company adalah program bla bla bla</p>
-            <a href="about.html" class="btn">Learn More</a>
+            <h1>Belajar Tanpa Batas</h1>
+            <p>Platform pendidikan modern yang mengubah cara kamu belajar</p>
+            <a href="#courses" class="cta-button"><span>Mulai Belajar Sekarang</span></a>
         </div>
     </section>
+
+    <section class="stats">
+        <div class="stat-card reveal">
+            <div class="stat-number" data-target="50000">0</div>
+            <div class="stat-label">Siswa Aktif</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-label">Kursus Tersedia</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">Instruktur Expert</div>
+        </div>
+        <div class="stat-card reveal">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-label">Tingkat Kepuasan</div>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <h2 class="section-title reveal">Kursus Populer</h2>
+        <div class="course-grid">
+            <div class="course-card reveal">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-icon">💻</div>
+                        <h3 class="course-title">Web Development</h3>
+                        <p class="course-desc">Kuasai teknologi web modern dari dasar hingga mahir</p>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="course-title">Yang Akan Kamu Pelajari:</h3>
+                        <ul class="course-features">
+                            <li>HTML5 & CSS3 Modern</li>
+                            <li>JavaScript & Framework</li>
+                            <li>Responsive Design</li>
+                            <li>Backend Development</li>
+                            <li>Project Real-World</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-icon">📊</div>
+                        <h3 class="course-title">Data Science</h3>
+                        <p class="course-desc">Analisis data dengan tools dan teknik terkini</p>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="course-title">Yang Akan Kamu Pelajari:</h3>
+                        <ul class="course-features">
+                            <li>Python untuk Data Science</li>
+                            <li>Machine Learning Basics</li>
+                            <li>Data Visualization</li>
+                            <li>Statistical Analysis</li>
+                            <li>Real Dataset Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-icon">🎨</div>
+                        <h3 class="course-title">UI/UX Design</h3>
+                        <p class="course-desc">Ciptakan pengalaman digital yang memukau</p>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="course-title">Yang Akan Kamu Pelajari:</h3>
+                        <ul class="course-features">
+                            <li>Design Principles</li>
+                            <li>Figma & Adobe XD</li>
+                            <li>User Research</li>
+                            <li>Prototyping</li>
+                            <li>Portfolio Building</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title reveal">Apa Kata Mereka</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Platform ini benar-benar mengubah cara saya belajar. Materi yang disajikan sangat mudah dipahami dan instrukturnya sangat membantu!"</p>
+                    <p class="testimonial-author">- Sarah Wijaya, Web Developer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Saya berhasil mendapat pekerjaan impian setelah menyelesaikan kursus di sini. Investasi terbaik untuk karir saya!"</p>
+                    <p class="testimonial-author">- Ahmad Rizki, Data Analyst</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Kualitas konten dan community support-nya luar biasa. Sangat worth it untuk pengembangan skill!"</p>
+                    <p class="testimonial-author">- Diana Putri, UI Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2 class="section-title reveal">Mengapa Memilih Kami?</h2>
+        <div class="features-grid">
+            <div class="feature-item reveal">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Kurikulum Terstruktur</h3>
+                <p class="feature-desc">Pembelajaran step-by-step yang mudah diikuti dengan panduan lengkap</p>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-icon">👥</div>
+                <h3 class="feature-title">Instruktur Berpengalaman</h3>
+                <p class="feature-desc">Belajar langsung dari praktisi industri yang berpengalaman</p>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Akses Seumur Hidup</h3>
+                <p class="feature-desc">Belajar kapan saja, dimana saja tanpa batas waktu</p>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Sertifikat Resmi</h3>
+                <p class="feature-desc">Dapatkan sertifikat yang diakui industri setelah menyelesaikan kursus</p>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-icon">💬</div>
+                <h3 class="feature-title">Community Support</h3>
+                <p class="feature-desc">Bergabung dengan komunitas pembelajar yang aktif dan suportif</p>
+            </div>
+            <div class="feature-item reveal">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">Mobile Friendly</h3>
+                <p class="feature-desc">Akses materi dari berbagai perangkat dengan mudah</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta-section" id="contact">
+        <h2 class="reveal">Siap Mulai Belajar?</h2>
+        <p class="reveal">Hubungi kami dan mulai perjalanan belajarmu sekarang juga!</p>
+        <a class="cta-button" href="#"><span>Hubungi Kami</span></a>
+    </section>
+
+    <footer>
+        <p>© 2025 EduVerse — All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
