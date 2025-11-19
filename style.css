@@ -30,7 +30,7 @@ header {
   background-color: rgba(255, 255, 255, 0.8); 
   top: 0;
   z-index: 1000;
-  padding: 15px;
+  padding: 10px 15px 10px 15px;
 }
 
 header a {
@@ -52,12 +52,28 @@ nav a:hover {
   color: blue;
 }
 
+.logo {
+  height: 72px;
+  width: auto;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.logo img a:hover {
+  height: 80px;
+  transition: 0.5s ease;
+}
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
   }
 
-  .logo a {
+  .logo img a {
     font-size: 30px;
   }
 
