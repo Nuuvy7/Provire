@@ -3,34 +3,33 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif; 
-  background: linear-gradient(270deg, #4B0096 , #4242C2 , #B1FAFC );         
+  background: black 
 }
-
- .hero-content {
-  text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  position: relative;
-  z-index: 2;
-  color: rgb(255, 255, 255);
-  opacity: 1.0;
-  background-color: #333;
-} 
-
 .hero-section {
   position: relative;
+  z-index: 2;
   height: 100vh;
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-image: url(tachyon.png);
-  opacity: 0.3;
+  background-image: url(Shi_Assoc._East_Section_3_Faust_Full_Uptied.png);
+  opacity: 0.7;
   background-size: cover;
   background-position: center;
   background-color: white;
 }
+
+ .hero-content {
+  position: relative;
+  z-index: 2;
+  opacity: 1.0;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  color: rgb(255, 255, 255);
+} 
 
 .hero-section::before {
   content: '';
