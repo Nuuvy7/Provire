@@ -29,7 +29,8 @@ body {
   margin-bottom: 8px;
 }
 .login input[type="text"],
-.login input[type="password"] {
+.login input[type="password"],
+.login input[type="email"] {
   width: 90%;
   padding: 8px;
   margin-bottom: 15px;
