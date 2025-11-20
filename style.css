@@ -12,10 +12,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-.hero {
-    background-color: rgba(255, 255, 255, 0.8);
+    text-color: white;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
