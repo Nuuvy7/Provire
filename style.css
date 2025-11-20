@@ -31,6 +31,7 @@ header {
   top: 0;
   z-index: 1000;
   padding: 10px 15px 10px 15px;
+  filter: transparency(100%);
 }
 
 header a {
@@ -53,6 +54,16 @@ nav a:hover {
   color: blue;
 }
 
+header.scrolled{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  top: 0;
+  z-index: 1000;
+  padding: 10px 15px 10px 15px;
+}
 .logo {
   height: 72px;
   width: auto;
