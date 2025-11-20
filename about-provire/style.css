@@ -3,18 +3,11 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;          
-}
-
-body {
-  background-color: linear-gradient(90deg, #4B0096 , #4242C2 , #B1FAFC );
-}
-
-.home {
-  background-color: linear-gradient(90deg, #4B0096 , #4242C2 , #B1FAFC );
+  background-color: linear-gradient(45deg, #4B0096, #4242C2, #B1FAFC);
 }
 
 .hero {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
