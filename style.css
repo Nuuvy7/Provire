@@ -7,13 +7,13 @@ body {
 }
 .hero-section {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 100vh;
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-image: url(Shi_Assoc._East_Section_3_Faust_Full_Uptied.png);
+  background-image: url('parfumspray.png');
   opacity: 0.7;
   background-size: cover;
   background-position: center;
@@ -30,6 +30,7 @@ body {
   width: 50%;
   color: rgb(255, 255, 255);
 } 
+
 
 .hero-section::before {
   content: '';
