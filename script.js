@@ -51,3 +51,8 @@ function updateCountdown() {
         updateCountdown();
 setInterval(updateCountdown, 1000);
 
+const floatingIcons = document.querySelectorAll('.floating-icon');
+floatingIcons.forEach((icon, index) => {
+    icon.style.animationDelay = `${index * 0.5}s`;
+});
+

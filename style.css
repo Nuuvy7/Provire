@@ -6,44 +6,43 @@ body {
   background: linear-gradient(270deg, #4B0096 , #4242C2 , #B1FAFC );         
 }
 
-body {
-  background-image: url(nasgor-solaria-yummy.png);
-  background-size: cover;
-}
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ .hero-content {
     text-align: center;
-    color: white;
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 50%;
-}
+} 
 
-.hero-section{
+.hero-section {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
+  background-image: url('nasgor-solaria-yummy.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section::before{
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   background:url('background-img.jpg') center/cover;
   opacity: 0.3;
   z-index: 1;
 }
+/* .hero-content{
+  position: relative;
+  z-index: 2;
+  color: black;
+} 
+  */
 header {
   display: flex;
   justify-content: space-between;
