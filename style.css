@@ -2,15 +2,8 @@ body {
   margin: 0;            
   padding: 0;
   height: 100%;
-  font-family: sans-serif;          
-}
-
-body {
-  background-color: linear-gradient(90deg, #4B0096 , #4242C2 , #B1FAFC );
-}
-
-.home {
-  background-color: linear-gradient(90deg, #4B0096 , #4242C2 , #B1FAFC );
+  font-family: sans-serif; 
+  background: linear-gradient(270deg, #4B0096 , #4242C2 , #B1FAFC );         
 }
 
 .hero {
@@ -48,7 +41,8 @@ header a {
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-decoration: none;
   color: #333;
   font-weight: bold;

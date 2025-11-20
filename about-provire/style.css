@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;          
-  background-color: linear-gradient(45deg, #4B0096, #4242C2, #B1FAFC);
+  background: linear-gradient(270deg, #4B0096 , #4242C2 , #B1FAFC );        
 }
 
 .hero {
@@ -41,7 +41,8 @@ header a {
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -67,6 +68,22 @@ nav a:hover {
   height: 80px;
   width: auto;
   transition: 0.5s ease;
+}
+
+.grid
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
