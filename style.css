@@ -3,7 +3,6 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif; 
-  background: url(nasgor-solaria-yummy.png);
   background: linear-gradient(270deg, #4B0096 , #4242C2 , #B1FAFC );         
 }
 
@@ -11,11 +10,12 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 50%;
   position: relative;
   z-index: 2;
-  color: white;
+  color: rgb(255, 255, 255);
+  opacity: 1.0;
+  background-color: #333;
 } 
 
 .hero-section {
@@ -25,9 +25,11 @@ body {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-image: url('nasgor-solaria-yummy.png');
+  background-image: url(tachyon.png);
+  opacity: 0.3;
   background-size: cover;
   background-position: center;
+  background-color: white;
 }
 
 .hero-section::before {
