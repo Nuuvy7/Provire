@@ -126,7 +126,11 @@ header.scrolled{
     padding: 10px;
   }
 
-  .hero {
-    width: 80%;
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content img {
+    width: 330px;
   }
 }
