@@ -56,3 +56,28 @@ floatingIcons.forEach((icon, index) => {
     icon.style.animationDelay = `${index * 0.5}s`;
 });
 
+document.addEventListener('DOMContenLoaded', () => {
+    const triggerSection = document.getElementById('trigger-section')
+    const triggerSection = document.getElementById('floating-banner')
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {})
+      entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                floatingBanner.classList.add('is-visible');
+                console.log('Banner displayed: Trigger section is visible.');
+            } else {
+                floatingBanner.classlist.remove('is-visible');
+                console.log('Banner hidden: Trigger section is not visible.');
+            }
+        });}.    , ovbserverOptions;
+
+
+    if (triggerSection) {
+        observer.observe(triggerSection);
+    }
