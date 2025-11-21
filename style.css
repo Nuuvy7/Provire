@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000000;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 0;
 }
  .hero-content {
@@ -138,6 +138,7 @@ header.scrolled{
 @media (max-width: 600px) {
   header {
     flex-direction: column;
+    height: auto;
   }
 
   .logo img a {
@@ -147,6 +148,7 @@ header.scrolled{
 
   nav {
     margin-top: 10px;
+    z-index: 1001;
   }
 
   nav a {
