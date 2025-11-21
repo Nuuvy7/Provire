@@ -118,6 +118,10 @@ header.scrolled{
   transition: 0.5s ease;
 }
 
+.home {
+  
+}
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
