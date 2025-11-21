@@ -132,7 +132,20 @@ header.scrolled{
 }
 
 .home {
-  navigation: none;
+  height: 600px;
+}
+
+.bannerproduct1 {
+  transform: translateX(-100%);
+   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* springy ease */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 50;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.bannerproduct1.is-visible {
+  transform: translateX(100%);
 }
 
 @media (max-width: 600px) {
