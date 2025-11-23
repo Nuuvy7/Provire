@@ -57,8 +57,8 @@ floatingIcons.forEach((icon, index) => {
 });
 
 document.addEventListener('DOMContenLoaded', () => {
-    const triggerSection = document.getElementById('trigger-section')
-    const triggerSection = document.getElementById('floating-banner')
+    const floatingBanner = document.getElementById('floating-banner');
+    const triggerSection = document.getElementById('trigger-section');
 
     const observerOptions = {
         root: null,
@@ -75,7 +75,7 @@ document.addEventListener('DOMContenLoaded', () => {
                 floatingBanner.classlist.remove('is-visible');
                 console.log('Banner hidden: Trigger section is not visible.');
             }
-        });}.    , ovbserverOptions;
+        });}    , ovbserverOptions);
 
 
     if (triggerSection) {
