@@ -23,8 +23,16 @@
         align-items:center;
     }
 
+    .PROVIRE{
+        color:#5ecbff;
+        font-size:32px;
+        font-weight:700;
+        text-decoration:none;
+        margin-left:10px;
+    }
+
     .navbar img{
-        height:35px;
+        height:60px;
         opacity:0.9;
     }
 
@@ -63,6 +71,12 @@
         font-weight:700;
         line-height:1.1;
         text-transform:uppercase;
+    }
+
+    .subtitle{
+        font-size:20px;
+        font-weight:400;
+        margin-top:15px;
     }
 
     .blue{
@@ -161,6 +175,9 @@
         .navbar img{
             height:28px;
         }
+        .PROVIRE{
+            font-size:20px;
+        }
     }
 
     @media(max-width:480px){
@@ -171,5 +188,8 @@
         .play-btn{
             width:45px;
             height:45px;
+        }
+        .PROVIRE{
+            font-size:16px;
         }
     }
