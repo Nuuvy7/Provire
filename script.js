@@ -33,30 +33,3 @@ const floatingIcons = document.querySelectorAll('.floating-icon');
 floatingIcons.forEach((icon, index) => {
     icon.style.animationDelay = `${index * 0.5}s`;
 });
-
-document.addEventListener('DOMContenLoaded', () => {
-    const floatingBanner = document.getElementById('floating-banner');
-    const triggerSection = document.getElementById('trigger-section');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {})
-      entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                floatingBanner.classList.add('is-visible');
-                console.log('Banner displayed: Trigger section is visible.');
-            } else {
-                floatingBanner.classlist.remove('is-visible');
-                console.log('Banner hidden: Trigger section is not visible.');
-            }
-        });
-    }    , observerOptions);
-
-
-    if (triggerSection) {
-        observer.observe(triggerSection);
-    }
