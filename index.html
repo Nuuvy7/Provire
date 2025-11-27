@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROVIRE SC</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="imagepopup.css">
+    <link rel="stylesheet" href="imagepopup.css" />
     <link rel="icon" href="Provire.png" />
 
     <link
@@ -16,12 +16,19 @@
 
   <body>
     <!-- NAV -->
-    <div class="navbar">
-      <img src="Provire.png" alt="PROVIRE SC" />
+    <div class="navbar" id="navbar">
+        <img src="Provire.png" alt="PROVIRE SC" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Our Products</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </nav>
     </div>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="section1">
       <img class="hero-bg" src="parfumspray.png" alt="background" />
 
       <div class="hero-content">
@@ -46,7 +53,7 @@
     </section>
 
     <!-- SECTION 2 -->
-    <section class="sec2">
+    <section class="sec2" id="section2">
       <div class="bg">
         <div class="hero-content"></div>
       </div>
@@ -101,5 +108,6 @@
     <script src="countdown.js"></script>
     <script src="script.js"></script>
     <script src="imagepopup.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>
