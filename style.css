@@ -11,6 +11,10 @@
         overflow-x:hidden;
     }
 
+    body::-webkit-scrollbar {
+    display: none;
+    }
+
     /* ===== NAVBAR ===== */
     .navbar{
         position:absolute;
@@ -64,6 +68,13 @@
         z-index:5;
         max-width:650px;
         animation:fadeIn 1.4s ease forwards;
+    }
+
+    .hero-text{
+        margin-top:20px;
+        animation:fadeIn 1.4s ease forwards;
+        animation-delay:.2s;
+        color: #000;
     }
 
     .title{
@@ -177,6 +188,11 @@
         }
         .PROVIRE{
             font-size:20px;
+        }
+        .hero-text{
+            margin-top:10px;
+            font-size: 13px;
+            margin: 15px;
         }
     }
 
