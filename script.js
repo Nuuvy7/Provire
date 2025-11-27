@@ -29,28 +29,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-
-function updateCountdown() {
-            const targetDate = new Date('2026-01-16').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown').textContent = 
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (difference < 0) {
-                document.getElementById('countdown').textContent = 'Launch Time!';
-            }
-        }
-
-        updateCountdown();
-setInterval(updateCountdown, 1000);
-
 const floatingIcons = document.querySelectorAll('.floating-icon');
 floatingIcons.forEach((icon, index) => {
     icon.style.animationDelay = `${index * 0.5}s`;
@@ -75,7 +53,8 @@ document.addEventListener('DOMContenLoaded', () => {
                 floatingBanner.classlist.remove('is-visible');
                 console.log('Banner hidden: Trigger section is not visible.');
             }
-        });}    , ovbserverOptions);
+        });
+    }    , observerOptions);
 
 
     if (triggerSection) {
