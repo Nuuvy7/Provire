@@ -1,0 +1,78 @@
+:root{
+  --left-offset: 12px;
+  --container-width: 80px;   /* adjust to fit your subject image width */
+  --container-height: 120px; /* adjust to fit your subject image height */
+  --transition-duration: 320ms;
+}
+
+/* Basic layout */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f4f6f9;
+  color:#111;
+}
+
+header{
+  padding:20px;
+  background: linear-gradient(180deg,#ffffffcc,#eef2f6);
+  border-bottom: 1px solid #e1e6ee;
+}
+
+main{
+  padding: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.filler p, .repeats p{
+  margin: 16px 0;
+}
+
+/* Subject container fixed on the left, off-canvas initially */
+.subject-container{
+  position: fixed;
+  left: var(--left-offset);
+  top: 50%;
+  transform: translate(-120%, -50%); /* hidden off-screen to the left */
+  width: 250px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-duration) cubic-bezier(.2,.9,.2,1), opacity var(--transition-duration) ease;
+  z-index: 9999;
+  pointer-events: none; /* avoid intercepting pointer events while hidden; change to auto if you want clickable */
+  opacity: 0;
+}
+
+/* Visible state slides in */
+.subject-container.visible{
+  transform: translate(0, -50%);
+  opacity: 1;
+  pointer-events: auto; /* allow interactions when visible */
+}
+
+/* Image styling: tune object-fit to your preference */
+.subject-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* use 'contain' if you want letterbox and entire subject to appear */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* When hovering the visible container you can slightly scale it */
+.subject-container.visible:hover{
+  transform: translate(0, -50%) scale(1.03);
+}
+
+/* Hide on small screens (optional) */
+@media (max-width:600px){
+  .subject-container{
+    display:none;
+  }
+}
