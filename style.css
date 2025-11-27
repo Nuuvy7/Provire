@@ -67,12 +67,12 @@ body::-webkit-scrollbar {
 }
 
 .navbar img {
-  height: 60px;
+  height: 80px;
   opacity: 0.9;
 }
 
 .navbar nav ul li a:hover {
-  color: #5ecbff;
+  color: #81d7ff;
 }
 
 /* EXPERIMENTAL */
@@ -120,7 +120,7 @@ body::-webkit-scrollbar {
 }
 
 .read-more {
-  background-color: #277df5;
+  background-color: #184188;
   padding: 10px 20px;
   border-radius: 5px;
 
@@ -150,8 +150,16 @@ body::-webkit-scrollbar {
 }
 
 .blue {
+  color: #ffffff;
+  background-color: #184188;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.blue-title {
   color: #277df5;
 }
+
 
 .play-btn {
   margin-top: 35px;
