@@ -1,23 +1,8 @@
 :root{
   --left-offset: 12px;
-  --container-width: 80px;   /* adjust to fit your subject image width */
-  --container-height: 120px; /* adjust to fit your subject image height */
+  --container-width: 250px;   /* adjust to fit your subject image width */
+  --container-height: 500px; /* adjust to fit your subject image height */
   --transition-duration: 320ms;
-}
-
-/* Basic layout */
-html,body{
-  height:100%;
-  margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f4f6f9;
-  color:#111;
-}
-
-header{
-  padding:20px;
-  background: linear-gradient(180deg,#ffffffcc,#eef2f6);
-  border-bottom: 1px solid #e1e6ee;
 }
 
 main{
@@ -73,6 +58,6 @@ main{
 /* Hide on small screens (optional) */
 @media (max-width:600px){
   .subject-container{
-    display:none;
+    display: no;
   }
 }

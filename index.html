@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROVIRE SC</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="imagepopup.css">
     <link rel="icon" href="Provire.png" />
 
     <link
@@ -26,7 +27,7 @@
       <div class="hero-content">
         <h1 class="title">
           PROVIRE <span class="blue">SC</span><br />
-          <!-- ANTI <span class="blue"> HAMA</span> -->
+          ANTI <span class="blue"> HAMA</span>
         </h1>
 
         <p class="subtitle">Coming Soon</p>
@@ -47,28 +48,58 @@
     <!-- SECTION 2 -->
     <section class="sec2">
       <div class="bg">
+        <div class="hero-content"></div>
+      </div>
+    </section>
+
+    <div id="subject-container" class="subject-container" aria-hidden="true">
+      <!-- Swap this src to your image path (e.g., assets/subject.png or a data URI) -->
+      <img id="subject-img" src="ARASYKEDIH.png" alt="Subject" />
+    </div>
+
+    <script>
+      // Populate repeated content to make the page scrollable
+      (function fillRepeats() {
+        const container = document.querySelector(".repeats");
+        let html = "";
+        for (let i = 0; i < 40; i++) {
+          html += `<p>Block ${
+            i + 1
+          }: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, massa sed luctus volutpat.</p>`;
+        }
+        container.innerHTML = html;
+      })();
+    </script>
+
+    <!-- SECTION 3 -->
+    <section class="sec3">
+      <div class="bg">
         <div class="hero-content">
           <h1 class="title">
             ABOUT<span class="blue">US</span><br />
             <!-- ANTI <span class="blue"> HAMA</span> -->
           </h1>
 
-          <p class="hero-text" style="text-align: justify;">
-            Provire Student Company (Provire SC) adalah perusahaan yang didirikan oleh siswa/i kelas 10 SMKN 6 Jakarta.
-            Perusahaan ini adalah sebuah program dari Prestasi Junior Indonesia yang bertujuan untuk mengembangkan talenta dan kreativitas serta jiwa kewirausahaan anak-anak Indonesia.
-            <br><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem pariatur in facilis nesciunt nihil cum dolores dolorem tenetur distinctio, debitis quo quae natus, magnam aliquid reiciendis nulla praesentium a ab.
+          <p class="hero-text" style="text-align: justify">
+            Provire adalah perusahaan inovasi berbasis lingkungan yang lahir
+            dari inisiatif siswa-siswi SMKN 6 Jakarta di bawah pembinaan Zurich
+            Indonesia. Sejak awal berdirinya, Provire menetapkan standar baru
+            dalam industri pengendalian hama dengan mengembangkan produk
+            berbahan alami, aman, dan berkelanjutan. Meski berawal dari dunia
+            pendidikan, Provire tumbuh menjadi brand visioner yang menggabungkan
+            ilmu pengetahuan, kreativitas, dan teknologi ramah lingkungan untuk
+            menjawab tantangan modern.
+            <br /><br />
           </p>
+          <a href="" class="read-more">Read More</a>
         </div>
       </div>
     </section>
-
-    <!-- SECTION 3 -->
-
 
     <footer></footer>
 
     <script src="countdown.js"></script>
     <script src="script.js"></script>
+    <script src="imagepopup.js"></script>
   </body>
 </html>

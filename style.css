@@ -77,6 +77,27 @@
         color: #000;
     }
 
+    .sec3 h1 {
+        color: #000;
+    }
+
+    .read-more{
+        background-color: #277DF5;
+        padding:10px 20px;
+        border-radius:5px;
+
+        text-decoration:none;
+        color:#ffffff;
+        margin-top:20px;
+        display:inline-block;
+        animation:fadeIn 1.4s ease forwards;
+        animation-delay:.2s;
+    }
+
+    .read-more:hover{
+        background-color:#044cb0;
+    }
+
     .title{
         font-size:56px;
         font-weight:700;
