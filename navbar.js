@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.style.height = 'auto'; // Ganti dengan tinggi navbar yang kamu inginkan, e.g., 'auto' jika fleksibel
             navbar.style.opacity = '0.9';
             navbar.style.backgroundColor = '#000000ff'; // Ganti warna solid
-            navbar.style.padding = '15px 25px'; 
+            navbar.style.padding = '15px 15px';
+            navbar.style.top = '0';
         } else {
             // Di section 1, height 0, opacity 0, background transparan
             navbar.style.height = '0';
