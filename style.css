@@ -21,14 +21,12 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 9999;
   display: flex;
   align-items: center;
   background-color: transparent;
   color: white;
-  opacity: 0;
   transition: opacity 0.3s ease;
-  height: 0px;
 }
 
 .navbar img {
@@ -251,8 +249,8 @@ body::-webkit-scrollbar {
 .sec2 .title {
   color: #000; /* kontras karena bg putih */
 }
-.sec2 .blue {
-  color: #0077ff;
+.sec2 {
+  height: 650px;
 }
 
 /* ===== ANIMATIONS ===== */

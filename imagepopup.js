@@ -1,54 +1,65 @@
 // script.js
-// Show the left-side subject image only while scrollY is inside a configured range.
-// The image appears when scrollY >= APPEAR_AT and disappears when scrollY > DISAPPEAR_AFTER
-// (i.e., visible while APPEAR_AT <= scrollY <= DISAPPEAR_AFTER).
-//
-// Change APPEAR_AT and DISAPPEAR_AFTER below to set your desired range.
-// You can also use percent-of-height logic (example commented below).
+// Behavior: when scrollY >= APPEAR_AT the image appears and is "locked" to the document Y
+// where it first appeared (so it stays at that exact position while you continue to scroll).
+// When scrollY < APPEAR_AT the image hides. Each time it appears we re-position it to the
+// current viewport center so it appears where the user saw it.
 
 (function () {
-  // ---- CONFIGURE THESE ----
-  const APPEAR_AT = 550;      // px scroll down to start showing
-  const DISAPPEAR_AFTER = 950; // px scroll after which it disappears again
-  // -------------------------
-
-  // Example: if you'd rather use percentages of the total scrollable height:
-  //   const percentAppear = 10; // 10% from top
-  //   const percentDisappear = 60; // 60% from top
-  //   // then compute:
-  //   // const APPEAR_AT = (document.documentElement.scrollHeight - window.innerHeight) * (percentAppear / 100);
+  const APPEAR_AT = 800; // px from top where the image will appear when crossed downward
 
   const container = document.getElementById('subject-container');
   const img = document.getElementById('subject-img');
+  const repeatsContainer = document.querySelector('.repeats');
 
-  if (!container || !img) {
-    return;
+  if (!container || !img) return;
+
+  // Fill content to make the page scrollable (keeps index.html small)
+  (function fillRepeats(count = 40) {
+    if (!repeatsContainer) return;
+    let html = '';
+    for (let i = 0; i < count; i++) {
+      html += `<p>Block ${i+1}: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, massa sed luctus volutpat.</p>`;
+    }
+    repeatsContainer.innerHTML = html;
+  })();
+
+  let lastKnownScrollY = window.scrollY || window.pageYOffset;
+  let ticking = false;
+  let isVisible = false;
+
+  function showAndLockAtCurrentViewport() {
+    // Compute the document Y coordinate that corresponds to the viewport center,
+    // then set container.style.top so it stays at that document Y.
+    const viewportCenterDocY = (window.scrollY || window.pageYOffset) + window.innerHeight / 2;
+    container.style.top = `${Math.round(viewportCenterDocY)}px`;
+    // Ensure container uses absolute position (it already does in CSS) and slide it in
+    container.classList.add('visible');
+    container.setAttribute('aria-hidden', 'false');
+    isVisible = true;
   }
 
-  let lastKnownScrollY = window.scrollY;
-  let ticking = false;
-
-  function isInRange(scrollY) {
-    // Visible while inside the inclusive range [APPEAR_AT, DISAPPEAR_AFTER]
-    return scrollY >= APPEAR_AT && scrollY <= DISAPPEAR_AFTER;
+  function hideAndResetPosition() {
+    container.classList.remove('visible');
+    container.setAttribute('aria-hidden', 'true');
+    // keep top value if you want (no need to clear). We can clear it to reset:
+    // container.style.top = ''; 
+    isVisible = false;
   }
 
   function updateVisibility(scrollY) {
-    if (isInRange(scrollY)) {
-      if (!container.classList.contains('visible')) {
-        container.classList.add('visible');
-        container.setAttribute('aria-hidden', 'false');
-      }
-    } else {
-      if (container.classList.contains('visible')) {
-        container.classList.remove('visible');
-        container.setAttribute('aria-hidden', 'true');
-      }
+    if (!isVisible && scrollY >= APPEAR_AT) {
+      // Crossed the threshold downward -> show and lock to current position
+      showAndLockAtCurrentViewport();
+    } else if (isVisible && scrollY < APPEAR_AT) {
+      // Scrolled back up above threshold -> hide
+      hideAndResetPosition();
     }
+    // Note: while visible, subsequent scrolling does NOT move the container's top,
+    // so it stays at the same document coordinate where it first appeared.
   }
 
   function onScroll() {
-    lastKnownScrollY = window.scrollY;
+    lastKnownScrollY = window.scrollY || window.pageYOffset;
     if (!ticking) {
       window.requestAnimationFrame(function () {
         updateVisibility(lastKnownScrollY);
@@ -58,21 +69,28 @@
     }
   }
 
-  // Initialize
+  // Initialize based on current scroll position (in case page is loaded scrolled)
   window.addEventListener('load', function () {
-    // If you want APPEAR_AT/DISAPPEAR_AFTER to be percent-based, compute them here using scrollHeight.
-    updateVisibility(window.scrollY);
+    updateVisibility(window.scrollY || window.pageYOffset);
   });
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', function () {
-    // If you're using percent-based thresholds, recompute them here on resize:
-    // (not required for fixed px thresholds)
-    updateVisibility(window.scrollY);
-  });
 
-  // Optional interaction: click the image to scroll to top
+  // On resize, if the element is currently visible you may want to re-lock it to center,
+  // or keep the original lock. Uncomment the following to re-lock on resize:
+  // window.addEventListener('resize', function () {
+  //   if (isVisible) showAndLockAtCurrentViewport();
+  // });
+
+  // Optional: clicking the image scrolls to top
   container.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Show immediately if user interacts (wheel/touch)
+  ['wheel','touchstart'].forEach(evt => {
+    window.addEventListener(evt, () => {
+      updateVisibility(window.scrollY || window.pageYOffset);
+    }, { passive: true });
   });
 })();
