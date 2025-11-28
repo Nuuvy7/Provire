@@ -57,6 +57,7 @@ body {
   opacity: 0.99;
   color: white;
   transition: opacity 0.3s ease;
+  padding: 5px 15px;
 }
 
 .navbar img {
