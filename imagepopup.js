@@ -9,7 +9,7 @@
 (function () {
   // ---- CONFIGURE THESE ----
   const APPEAR_AT = 550;      // px scroll down to start showing
-  const DISAPPEAR_AFTER = 750; // px scroll after which it disappears again
+  const DISAPPEAR_AFTER = 950; // px scroll after which it disappears again
   // -------------------------
 
   // Example: if you'd rather use percentages of the total scrollable height:

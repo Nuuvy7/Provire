@@ -22,7 +22,7 @@ main{
   top: 50%;
   transform: translate(-120%, -50%); /* hidden off-screen to the left */
   width: 250px;
-  height: 500px;
+  height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;

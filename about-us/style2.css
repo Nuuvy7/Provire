@@ -1,0 +1,105 @@
+.container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 20px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #0077ff;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 35px;
+            opacity: 0.7;
+        }
+
+        .section-box {
+            background: white;
+            border-radius: 23px;
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #ddd;
+        }
+        .section-box img {
+            width: 55%;
+            height: 55%;
+            border-radius: 15px;
+            padding: 20px 0px 20px 0px;
+            transition: 0.3s;
+            border-radius: 5%;
+        }
+        .section-box img:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .section-box img.anggota {
+            width: 40%;
+            height: 40%;
+            margin: 8px;
+            transition: 0.3s;
+            border-radius: 5%;
+        }
+
+        .section-box img.anggota:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .section-box {
+            background: white;
+            border-radius: 23px;
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #ddd;
+        }
+
+        .box-vismis {
+            background: white;
+            border-radius: 23px;
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #ddd;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-left: 18px;
+            margin-top: 8px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 15px;
+            color: white;
+            background: #0077ff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        a.back:hover {
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }

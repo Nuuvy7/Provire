@@ -1,167 +1,82 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Structure – PROVIRE SC</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure – PROVIRE SC</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:'Poppins',sans-serif;
-    }
+    <style></style>
+  </head>
 
-    body{
-        background:#f5f5f5;
-        overflow-x:hidden;
+  <body>
+    <div class="navbar" id="navbar">
+      <img src="../provirewhite.png" alt="PROVIRE SC" id="navbar" />
+      <nav>
+        <ul>
+          <li><a href=".." id="navbar">Home</a></li>
+          <li><a href="" id="navbar">Our Products</a></li>
+          <li><a href="." id="navbar">About Us</a></li>
+          <!-- <li><a href=""id="navbar">Structure</a></li> -->
+        </ul>
+      </nav>
+    </div>
 
-        /* background jundijawa */
-        --color: rgba(36, 36, 36, 0.1);
-        background-image:
-            linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
-            linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
-        background-size: 30px 30px;
-    }
-
-    .container{
-        max-width:450px;
-        margin:80px auto;
-        padding:20px 20px 20px 20px;
-        text-align:center;
-    }
-
-    h1{
-        font-size:40px;
-        font-weight:700;
-        margin-bottom:40px;
-        color:#000;
-    }
-
-    /* Top Roles */
-    .role-box{
-        background:white;
-        border-radius:23px;
-        padding:18px 25px;
-        margin-bottom:25px;
-        box-shadow:0 4px 12px rgba(0,0,0,0.08);
-        border:1px solid #ddd;
-    }
-    .role-box img{
-        width: 100%;
-        height:100%;
-        border-radius: 17px;
-        object-fit:cover;
-        margin-bottom:15px;
-    }
-
-    .role-title{
-        font-size:22px;
-        font-weight:600;
-        margin-bottom:3px;
-        color:#0077ff;
-    }
-
-    .role-name{
-        font-size:18px;
-        color:#000;
-        font-weight:500;
-    }
-
-    /* Division Cards */
-    .division-grid{
-        margin-top:40px;
-        max-width:80%;
-        display:grid;
-        justify-content: center;
-        grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
-        gap:20px;
-        text-align: center;
-    }
-
-    .card{
-        background:white;
-        border-radius:18px;
-        padding:20px;
-        border:1px solid #ddd;
-        box-shadow:0 3px 8px rgba(0,0,0,0.07);
-        transition:.3s;
-        cursor:pointer;
-    }
-
-    .card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 6px 20px rgba(0,0,0,0.12);
-    }
-
-    .card h3{
-        margin-bottom:5px;
-        font-size:20px;
-        font-weight:600;
-        color:#000;
-    }
-
-    .card p{
-        font-size:14px;
-        color:#444;
-    }
-</style>
-</head>
-
-<body>
-
-<div class="container">
-    
-    <h1>STRUCTURE</h1>
-    <!-- <marquee behavior="scroll" direction="left" scrollamount="8">
+    <div class="container">
+        <h1>STRUCTURE</h1>
+      <!-- <marquee behavior="scroll" direction="left" scrollamount="8">
         <img src="andi.png">
     </marquee> -->
-    <div class="role-box">
-        <img src="public.png" alt="Yasmin Nur Azizah">
-    </div>
+    <center>
+      <div class="role-grid">
+        <div class="role-box">
+          <img src="public.png" alt="Yasmin Nur Azizah" class="ceo" />
+        </div>
 
-    <!-- Secretary -->
-    <div class="role-box">
-        <img src="andi.png" alt="Andi Zakia Salma Makmur">
-    </div>
-</div>
-    <center><h2>DIVISION STRUCTURE</h2>
-    <div class="division-grid">
-
-        <div class="card" onclick="location.href='prodcution.html'">
-            <h3>Production</h3>
-            <p>Klik untuk melihat struktur divisi</p>
+        <!-- Secretary -->
+        <div class="role-box">
+          <img src="andi.png" alt="Andi Zakia Salma Makmur" class="secretary"/>
         </div>
-        
-        <div class="card" onclick="location.href='pr.html'">
-            <h3>Public Relation</h3>
-            <p>Klik untuk melihat struktur divisi</p>
-        </div>
-            <div class="card" onclick="location.href='finance.html'">
-            <h3>Finance</h3>
-            <p>Klik untuk melihat struktur divisi</p>
-        </div>
-        
-        <div class="card" onclick="location.href='marketing.html'">
-            <h3>Marketing</h3>
-            <p>Klik untuk melihat struktur divisi</p>
-        </div>
-        
-        <div class="card" onclick="location.href='hrd.html'">
-            <h3>Human Resources</h3>
-            <p>Klik untuk melihat struktur divisi</p>
-        </div>
-        <div class="card" onclick="location.href='sales.html'">
-            <h3>Sales</h3>
-            <p>Klik untuk melihat struktur divisi</p>
-        </div>
-        
+      </div>
     </div>
     </center>
+    
+    <center>
+      <h2>DIVISION STRUCTURE</h2>
+      <div class="division-grid">
+        <div class="card" onclick="location.href='prodcution.html'">
+          <h3>Production</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
 
+        <div class="card" onclick="location.href='pr.html'">
+          <h3>Public Relation</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
+        <div class="card" onclick="location.href='finance.html'">
+          <h3>Finance</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
 
-</body>
+        <div class="card" onclick="location.href='marketing.html'">
+          <h3>Marketing</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
+
+        <div class="card" onclick="location.href='hrd.html'">
+          <h3>Human Resources</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
+        <div class="card" onclick="location.href='sales.html'">
+          <h3>Sales</h3>
+          <p>Klik untuk melihat struktur divisi</p>
+        </div>
+      </div>
+    </center>
+  </body>
 </html>
