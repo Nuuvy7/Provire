@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.scrollY >= window.innerHeight) {
             //section 2+
             navbar.style.height = 'auto'; 
-            navbar.style.opacity = '0.95';
+            navbar.style.opacity = '1';
             navbar.style.backgroundColor = '#184188';
             navbar.style.padding = '5px 15px';
             navbar.style.top = '0';
