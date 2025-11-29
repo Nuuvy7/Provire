@@ -110,7 +110,7 @@ body {
 
 .container {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 20px auto 20px auto;
   padding: 20px 20px 20px 20px;
   text-align: center;  
 }
@@ -261,4 +261,48 @@ h1 {
   .division-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+
+.read-more {
+  background-color: #184188;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 80px 0px 20px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0f2a5c;
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+
+.about-more {
+  background-color: #184188;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-more:hover {
+  background-color: #0f2a5c;
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: #184188;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
 }
