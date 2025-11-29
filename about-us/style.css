@@ -201,6 +201,11 @@ h1 {
   color: #444;
 }
 
+.div-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 40px;
