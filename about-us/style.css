@@ -206,6 +206,96 @@ h1 {
   margin-bottom: 10px;
 }
 
+.read-more {
+  background-color: #184188;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 80px 0px 20px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0f2a5c;
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+
+.about-more {
+  background-color: #184188;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-more:hover {
+  background-color: #0f2a5c;
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+
+.footer {
+    background: #184188;
+    color: #ffffff;
+    padding: 30px 5px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 5px 30px;
+    text-align: left;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer-desc {
+    margin: 8px 0 15px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+.footer-contact {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+.footer-links a {
+    color: #9ca3af;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-copy {
+    border-top: 1px solid #374151;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+
 @media (max-width: 768px) {
   .title {
     font-size: 40px;
@@ -261,48 +351,18 @@ h1 {
   .division-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+  .footer-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-desc {
+    margin: 8px 0 15px;
+    line-height: 1.6;
+    font-size: 12px;
+    color: #d1d5db;
+}
 }
 
 
-.read-more {
-  background-color: #184188;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 80px 0px 20px 0px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.read-more:hover {
-  background-color: #0f2a5c;
-  scale: 1.05;
-  transition: all 0.3s ease;
-}
-
-.about-more {
-  background-color: #184188;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.about-more:hover {
-  background-color: #0f2a5c;
-  scale: 1.05;
-  transition: all 0.3s ease;
-}
-
-footer {
-  background-color: #184188;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
-}
