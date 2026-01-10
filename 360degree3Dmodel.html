@@ -3,55 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>360 View</title>
+    <link rel="stylesheet" href="360degree3Dmodel.css">
+    <link rel="icon" href="Provire.png" />
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<style>
-    body {
-    width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-
-  /* BACKGROUND JUNDIJAWA */
-  --color: rgba(36, 36, 36, 0.1);
-  background-color: #f5f5f5;
-  background-image: linear-gradient(
-      0deg,
-      transparent 24%,
-      var(--color) 25%,
-      var(--color) 26%,
-      transparent 27%,
-      transparent 74%,
-      var(--color) 75%,
-      var(--color) 76%,
-      transparent 77%,
-      transparent
-    ),
-    linear-gradient(
-      90deg,
-      transparent 24%,
-      var(--color) 25%,
-      var(--color) 26%,
-      transparent 27%,
-      transparent 74%,
-      var(--color) 75%,
-      var(--color) 76%,
-      transparent 77%,
-      transparent
-    );
-  background-size: 30px 30px;
-    }
-</style>
 </head>
 <body>
-    <model-viewer src="buzz.ant fix.glb" alt="Produk 3D"
+  <div class="navbar" id="navbar">
+        <img src="provirewhite.png" alt="PROVIRE SC" id="navbar"/>
+      <nav>
+        <ul>
+          <li><a href="index.html" id="navbar">Home</a></li>
+          <!-- <li><a href="" id="navbar">Our Products</a></li> -->
+          <li><a href="about-us/"id="navbar">About Us</a></li>
+          <li><a href="contact/" id="navbar">Contact</a></li>
+        </ul>
+      </nav>
+  </div>
+  <model-viewer src="Buzzant-nyamuk.glb" alt="Produk 3D"
     auto-rotate
     camera-controls
     style="width: 100%; height: 500px;">
-</model-viewer>
+  </model-viewer>
+  <footer class="footer">
+    <div class="footer-container">
+        <h2 class="footer-title">PROVIRE Student Company</h2>
+        <div class="footer-contact">
+            📍 SMKN 6 Jakarta, <br>
+            📧 provire.sc@gmail.com
+        </div>
+        <p class="footer-copy">
+            © 2025 PROVIRE Student Company. All Rights Reserved.
+        </p>
+    </div>
 </body>
 </html>
