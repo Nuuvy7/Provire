@@ -5,7 +5,7 @@
 // current viewport center so it appears where the user saw it.
 
 (function () {
-  const APPEAR_AT = 800; // px from top where the image will appear when crossed downward
+  const APPEAR_AT = 560; // px from top where the image will appear when crossed downward
 
   const container = document.getElementById('subject-container');
   const img = document.getElementById('subject-img');
