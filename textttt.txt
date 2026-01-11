@@ -1,8 +1,96 @@
 :root{
+  --textpopup-right-offset: 12px;
+  --textpopup-width: 420px;
+  --textpopup-transition-duration: 320ms;
+}
+
+.text-container{
+  position: absolute;
+  right: var(--textpopup-right-offset);
+  top: 0;
+  transform: translate(120%, -50%); /* off-screen right */
+  width: var(--textpopup-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--textpopup-transition-duration) cubic-bezier(.2,.9,.2,1), opacity var(--textpopup-transition-duration) ease;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.text-container.visible{
+  transform: translate(0, -50%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.text-container .text-content h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 350%;
+}
+
+.text-container .text-content h3{
+    padding-right: 5px;
+}
+
+.text-container .text-content{
+  color: #111;
+  padding: 14px 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 100%;
+  user-select: text;
+}
+
+.text-container .text-content a{
+    background-color: transparent;
+    border-radius: 10%;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: 0.3s
+}
+
+.text-container .text-content a:hover{
+    color: white;
+    background-color: #184188;
+    border-radius: 10%;
+    text-decoration: none;
+    padding: 5px;
+    transform: translate(0, -50%) scale(1.03);
+}
+
+@media (max-width:800px){
+  /* On small screens, pin the text popup to bottom center as a readable card */
+  .text-container{
+    position: fixed;
+    left: 10%;
+    right: auto;
+    bottom: 18px;
+    top: auto;
+    transform: translate(120%, 0);
+    width: 92%;
+    max-width: 420px;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10000;
+  }
+
+  .text-container .text-content{
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+}
+
+IMGGG
+
+:root{
   --left-offset: 12px;
   --container-width: 80px;   /* adjust to fit your subject image width */
   --container-height: 120px; /* adjust to fit your subject image height */
-  --transition-duration: 200ms;
+  --transition-duration: 320ms;
 }
 
 
