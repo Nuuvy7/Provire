@@ -5,20 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PROVIRE SC</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="imagepopup.css" />
-    <link rel="stylesheet" href="textpopup.css" />
     <link rel="icon" href="Provire.png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+        .sec2 {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .sec2 .bg {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            display: flexbox;
+        }
+
+        .sec2 .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .subject-img {
+            max-width: 850px;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .subject-container {
+            position: absolute;
+            top: 150%;
+            left: 32%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .text-container {
+            position: absolute;
+            top: 150%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            z-index: 2;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .subject-container {
+                left: 50%;
+                top: 140%;
+                overflow: hidden;
+            }
+            .text-container {
+                left: 75%;
+                top: 120%;
+                max-width: 90%;
+                transform: translate(-50%, -50%);
+            }
+            .text-container h1 {
+                font-size: 1.5rem;
+            }
+            .text-container p {
+                font-size: 10px;
+            }
+        }
+    </style>
+
+
   </head>
 
   <body>
     <!-- NAV -->
     <div class="navbar" id="navbar">
-        <img src="provirewhite.png" alt="PROVIRE SC" id="navbar"/>
+        <img src="../provirewhite.png" alt="PROVIRE SC" id="navbar"/>
       <nav>
         <ul>
           <li><a href="index.html" id="navbar">Home</a></li>
@@ -31,7 +99,7 @@
 
     <!-- HERO -->
     <section class="hero" id="section1">
-      <img class="hero-bg" src="buzz-ant.png" alt="background" />
+      <img class="hero-bg" src="../buzz-ant.png" alt="background" />
 
       <div class="hero-content">
         <h1 class="title">
@@ -60,23 +128,22 @@
     <section class="sec2" id="section2">
       <div class="bg">
         <div class="hero-content"></div>
-      </div>
     </section>
 
     <div id="subject-container" class="subject-container" aria-hidden="true">
-      <img id="subject-img" src="buzzantbanner2.png" alt="Subject" /> 
+      <img id="subject-img" class="subject-img" src="../buzzantbanner2.png" alt="Subject" /> 
     </div>
 
     <div id="text-container" class="text-container" aria-hidden="true">
       <div id="text-content" class="text-content">
         <h1>BuzzAnt</h1>
         <br>
-        BuzzAnt merupakan produk Spray pembasmi hama yang terbuat dari bahan-bahan ramah lingkungan.
+        <p>BuzzAnt merupakan produk Spray pembasmi hama yang terbuat dari bahan-bahan ramah lingkungan.
         <br>
-        Baca selebihnya di About Us.
-        <br>
-        <br>
-        <h3><a href="360degree3Dmodel.html">View 360°</a></h3>
+        Baca selebihnya di About Us.</p>
+        <!-- <br>
+        <h3><a href="360degree3Dmodel.html">View 360°</a></h3> -->
+      </div>
       </div>
     </div>
 
@@ -133,10 +200,10 @@
 </footer>
 
 
-    <script src="countdown.js"></script>
-    <script src="script.js"></script>
+    <script src="../countdown.js"></script>
+    <script src="../script.js"></script>
     <script src="textpopup.js"></script>
     <script src="imagepopup.js"></script>
-    <script src="navbar.js"></script>
+    <script src="../navbar.js"></script>
   </body>
 </html>
