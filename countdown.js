@@ -33,7 +33,7 @@
 //     updateCountdown();
 //     setInterval(updateCountdown, 1000);
 
-const targetDate = new Date("2026-01-15T13:10:00").getTime();
+const targetDate = new Date("2026-01-15T14:45:00").getTime();
 
 const countdownEl = document.querySelector("[countdown]");
 const subtitleEl = document.querySelector(".subtitle"); // Tambahkan ini untuk mengakses elemen subtitle
