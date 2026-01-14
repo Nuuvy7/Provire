@@ -33,18 +33,18 @@
 //     updateCountdown();
 //     setInterval(updateCountdown, 1000);
 
-const targetDate = new Date("2026-01-15T14:45:00").getTime();
+const targetDate = new Date("2026-01-15T13:10:00").getTime();
 
 const countdownEl = document.querySelector("[countdown]");
-const subtitleEl = document.querySelector(".subtitle"); // Tambahkan ini untuk mengakses elemen subtitle
+const subtitleEl = document.querySelector(".subtitle"); 
 
 function updateCountdown() {
     const now = new Date().getTime();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-        countdownEl.innerHTML = "<span style='font-weight:600;'>Waktu Habis!</span>";
-        subtitleEl.innerHTML = "Event Dimulai!"; // Ubah teks "Coming Soon" menjadi "Event Dimulai!" ketika waktu habis
+        countdownEl.innerHTML = "<span style='font-weight:600; font-size: 22px;'>IT'S STARTING!</span>";
+        subtitleEl.innerHTML = ""; 
         return;
     }
 
