@@ -1,4 +1,4 @@
-const targetDate = new Date("2026-01-15T14:30:00").getTime();
+const targetDate = new Date("2026-01-15T14:59:40").getTime();
 const countdownEl = document.querySelector("[countdown]");
 const subtitleEl = document.querySelector(".subtitle");
 
@@ -11,16 +11,15 @@ function updateCountdown() {
     if (diff <= 0) {
         countdownEl.innerHTML = "<span style='font-weight:600; font-size:22px'>IT'S STARTING</span>";
         subtitleEl.innerHTML = "";
-        
-        // Munculkan confetti hingga 5 kali
-        if (confettiCount < 5) {
+
+        if (confettiCount < 3) {
             confetti({
                 particleCount: 400, 
                 spread: 1200, 
                 origin: { y: 0.6 },
                 duration: 5000  
             });
-            confettiCount++;  // Increment counter setiap kali muncul
+            confettiCount++;  
         }
         return;
     }
