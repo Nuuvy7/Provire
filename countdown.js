@@ -1,4 +1,4 @@
-const targetDate = new Date("2026-01-15T14:59:40").getTime();
+const targetDate = new Date("2026-01-15T13:52:00").getTime();
 const countdownEl = document.querySelector("[countdown]");
 const subtitleEl = document.querySelector(".subtitle");
 
@@ -9,7 +9,7 @@ function updateCountdown() {
     const diff = targetDate - now;
 
     if (diff <= 0) {
-        countdownEl.innerHTML = "<span style='font-weight:600; font-size:22px'>IT'S STARTING</span>";
+        countdownEl.innerHTML = "<span style='font-weight:600; font-size:22px'></span>";
         subtitleEl.innerHTML = "";
 
         if (confettiCount < 3) {
